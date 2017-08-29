@@ -12,10 +12,10 @@ class Server {
 	static function main() {
 		
 		var root = new Root();
-		var router = new Router<Root>(root);
+		var router = new Router<MySession, Root>(root);
 		
 		var container = new NodeContainer(8080);
-		container.run(function(req) return router.route(Context.ofRequest(req)).recover(OutgoingResponse.reportError));
+		container.run(function(req) return router.route(Context.authed(req, MySession.new)).recover(OutgoingResponse.reportError));
 		
 	}
 }

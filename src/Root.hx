@@ -44,6 +44,43 @@ class Root {
 	
 	@:sub('/sub')
 	public var sub = new Sub();
+	
+	@:get
+	public function me(user:{id:String}) {
+		return user;
+	}
+	
+	@:get('current_user')
+	public function currentUser(user:Option<{id:String}>) {
+		return switch user {
+			case None: 'Not logged in';
+			case Some(user): 'Logged in as ${user.id}';
+		}
+	}
+	
+	@:restrict(true)
+	@:get
+	public function restricted()
+		return 'Restricted information';
+	
+	@:sub('/users/$id')
+	public function users(id:String) return new Users(id);
+}
+
+class Users {
+	var id:String;
+	
+	public function new(id)
+		this.id = id;
+	
+	@:get('/')
+	@:restrict(user.id == this.id)
+	public function profile() {
+		return {
+			id: id,
+			name: 'John Doe',
+		}
+	}
 }
 
 class Sub {
