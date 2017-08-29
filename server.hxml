@@ -1,0 +1,6 @@
+-cp src
+-main Server
+-js bin/server.js
+
+-lib hxnodejs
+-lib tink_web
