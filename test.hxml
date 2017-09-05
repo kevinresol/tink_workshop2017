@@ -1,0 +1,8 @@
+-cp src
+-cp tests
+-main RunTests
+-js bin/tests.js
+
+-lib hxnodejs
+-lib tink_web
+-lib tink_unittest
