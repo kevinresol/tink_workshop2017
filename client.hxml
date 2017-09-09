@@ -1,0 +1,5 @@
+-cp src
+-main Client
+-js bin/client.js
+
+-lib tink_web
