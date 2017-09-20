@@ -2,8 +2,8 @@
 
 ### Video recording of the workshop
 
-Part 1: https://www.twitch.tv/videos/174665157?t=02h03m16s
-Part 2: https://www.twitch.tv/videos/174685283
+- Part 1: https://www.twitch.tv/videos/174665157?t=02h03m16s
+- Part 2: https://www.twitch.tv/videos/174685283
 
 ### Prerequisites
 
