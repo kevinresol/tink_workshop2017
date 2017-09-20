@@ -28,3 +28,7 @@ node bin/server.js
 
 # Navigate to http://localhost:8080/index.html
 ```
+
+### Questions?
+
+Feel free to throw me a [GitHub issue](https://github.com/kevinresol/tink_workshop2017/issues/new) or join the [Gitter channel](https://gitter.im/haxetink/public) to ask!
